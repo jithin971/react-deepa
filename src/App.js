@@ -1,23 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import Test from './components/test';
 
-function App() {
+const App = () => {
+  const fName = "jithin"
+  const age = 20;
+  const isValid = false;
+  const employee = { name: 'jitiin', age: 20 }
+  const employees = [{ name: 'jitiin', age: 20 }, { name: 'raju', age: 30 }]
+
+  const { name } = employee;
+  const [firstEmployee,secoond] = employees
+
+  let a=[1,2,3,4]
+  let b=[...a];
+  console.log("a=>",a)
+  b.push(5)
+  console.log("a=>",a)
+  console.log("b=>",b)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* name={fName}
+      {JSON.stringify(employee)}
+      {JSON.stringify(employees)} */}
+
+      {/* To convert object to string  */}
+      {JSON.stringify(firstEmployee.name)}
+      {JSON.stringify(secoond.name)}
+
+      {name}
+      {/* <Test name={fName} age={age} /> */}
     </div>
   );
 }
