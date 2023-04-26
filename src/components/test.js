@@ -1,7 +1,8 @@
-const Test=()=>{
+const Test=({name,age})=>{
     return(
         <div>
-            This is my testing component
+            name:{name}<br/>
+            age:{age}
         </div>
     )
 }

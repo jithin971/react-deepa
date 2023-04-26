@@ -27,11 +27,12 @@ const App = () => {
       {JSON.stringify(employees)} */}
 
       {/* To convert object to string  */}
-      {JSON.stringify(firstEmployee.name)}
+      {/* {JSON.stringify(firstEmployee.name)}
       {JSON.stringify(secoond.name)}
 
-      {name}
-      {/* <Test name={fName} age={age} /> */}
+      {name} */}
+      App component
+      <Test name={fName} age={age} />
     </div>
   );
 }
