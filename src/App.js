@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Test from './components/test';
+import Counter from './components/counter';
 
 const App = () => {
   const fName = "jithin"
   const age = 20;
-  const isValid = false;
+  const isEnabled = true;
   const employee = { name: 'jitiin', age: 20 }
-  const employees = [{ name: 'jitiin', age: 20 }, { name: 'raju', age: 30 }]
+  const employees = [{ name: 'jitiin', age: 20,gender:'M' }, { name: 'Amrutha', age: 30 ,gender:'F'}]
 
   const { name } = employee;
   const [firstEmployee,secoond] = employees
@@ -32,7 +33,9 @@ const App = () => {
 
       {name} */}
       App component
-      <Test name={fName} age={age} />
+      <Test name={fName} age={age} empList={employees} isEnabled={isEnabled}/>
+      <Counter/>
+
     </div>
   );
 }
