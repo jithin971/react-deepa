@@ -4,7 +4,8 @@ const Counter = () => {
     let [counter, setCounter] = useState(0);
     let [name, setName] = useState("")
     let [isListEnabled, setListEnabled] = useState(false)
-    let [employees,setEmployee]=useState(["jithin"])
+    let [employees,setEmployee]=useState(["jithin"]);
+    
 
     const incrementCounter = () => {
 
@@ -22,9 +23,11 @@ const Counter = () => {
         console.log(event.target.checked)
         setListEnabled(event.target.checked)
     }
+
     const addEmployee=()=>{
         setEmployee([...employees,name])
     }
+
     return (
         <>
         <div>
