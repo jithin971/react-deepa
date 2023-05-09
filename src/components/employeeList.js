@@ -15,7 +15,7 @@ const EmployeeList = () => {
 
     return (
         <>
-
+Employe
             <div>
                 Name:<input onChange={setData} name="employeeName" /> {JSON.stringify(formData)}<br />
                 age:<input onChange={(event)=>setData(event)} name="employeeAge" />
