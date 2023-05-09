@@ -3,6 +3,9 @@ import './App.css';
 import Test from './components/test';
 import Counter from './components/counter';
 import EmployeeList from './components/employeeList';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/home';
+import About from './components/about';
 
 const App = () => {
   const fName = "jithin"
@@ -24,20 +27,13 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* name={fName}
-      {JSON.stringify(employee)}
-      {JSON.stringify(employees)} */}
 
-      {/* To convert object to string  */}
-      {/* {JSON.stringify(firstEmployee.name)}
-      {JSON.stringify(secoond.name)}
-
-      {name} */}
-      {/* App component */}
-      {/* <Test name={fName} age={age} empList={employees} isEnabled={isEnabled} /> */}
-      {/* <Counter/>
-       */}
-      <EmployeeList />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='about' element={<About />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
