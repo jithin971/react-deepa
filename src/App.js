@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Test from './components/test';
-import Counter from './components/counter';
-import EmployeeList from './components/employeeList';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/home';
 import About from './components/about';
+import NotFound from './components/notFound';
+import Header from './components/header';
 
 const App = () => {
   const fName = "jithin"
@@ -27,12 +27,17 @@ const App = () => {
 
   return (
     <div className="App">
-
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='about' element={<About />}></Route>
+          {/* <Route path='/' element={<Layout />} >
+           
+          </Route> */}
+          <Route path='/' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
+        {/* footer */}
       </BrowserRouter>
     </div>
   );

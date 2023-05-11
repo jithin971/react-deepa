@@ -1,6 +1,6 @@
 const About = () => {
     return (<div>
-        About
+        About welome to about component
     </div>)
 }
 
