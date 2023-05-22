@@ -19,6 +19,9 @@ const Header = () => {
                 <li style={listItem}>
                     <Link to='/about'>about</Link>
                 </li>
+                <li>
+                    <Link to='/employee' >Employee</Link>
+                </li>
             </ul>
         </div>
     )
