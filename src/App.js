@@ -9,6 +9,7 @@ import Header from './components/header';
 import Employee from './components/employee/employee';
 import CreateEmployee from './components/employee/createEmployee';
 import ViewEmployee from './components/employee/viewEmployee';
+import ViewDetails from './components/employee/viewDetails';
 
 const App = () => {
   const fName = "jithin"
@@ -41,6 +42,7 @@ const App = () => {
 
             <Route path='create' element={<CreateEmployee />} />
             <Route path='display' element={<ViewEmployee />} />
+            <Route path='display/:id' element={<ViewDetails />} />
 
           </Route>
 

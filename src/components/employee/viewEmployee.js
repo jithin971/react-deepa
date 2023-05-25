@@ -1,8 +1,10 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const ViewEmployee = () => {
     const [post, setPost] = useState([])
+    const navigate=useNavigate()
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/posts").then(
@@ -12,6 +14,11 @@ const ViewEmployee = () => {
             }
         )
     }, [])
+
+    const viewDetails = (id) => {
+        console.log(id)
+        navigate(`${id}`)
+    }
 
     return (<div>
         <table>
@@ -33,9 +40,9 @@ const ViewEmployee = () => {
                             <td>
                                 {res.title}
                             </td>
-                            <div>
-                                <button>View</button>
-                            </div>
+                            <td>
+                                <button onClick={() => viewDetails(res.id)}>View</button>
+                            </td>
                         </tr>
                     )
                 })
