@@ -1,10 +1,11 @@
+import { Button } from "antd"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 const ViewEmployee = () => {
     const [post, setPost] = useState([])
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get("https://jsonplaceholder.typicode.com/posts").then(
@@ -41,7 +42,7 @@ const ViewEmployee = () => {
                                 {res.title}
                             </td>
                             <td>
-                                <button onClick={() => viewDetails(res.id)}>View</button>
+                                <Button type="primary" onClick={() => viewDetails(res.id)}>View</Button>
                             </td>
                         </tr>
                     )
